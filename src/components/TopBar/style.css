@@ -18,7 +18,7 @@
     line-height: 19px;
     color: #3B89B2;
     position: relative;
-    margin-top: 28px;
+    margin-top: 8px;
 }
 
 .direct-contact span {
@@ -53,8 +53,14 @@
     justify-content: center;
     background-position: center;
     position: absolute;
-    right: -54px;
-    top: -10px;
+    right: -52px;
+    top: -12px;
+}
+
+.direct-contact span {
+    /*width: 100%;*/
+    display: inline-block;
+    /*text-align: right;*/
 }
 
 .header-search {
@@ -118,9 +124,11 @@
     opacity: 0.7;
 }
 
-@media (max-width: 1200px) {
+
+
+@media (max-width: 1199px) {
     .header-search::after {
-        right: 2px;
+        right: -3px;
         top: 0px;
     }
 
@@ -131,6 +139,6 @@
     }
 
     .top-header div:nth-child(2) {
-        padding-right: 20px;
+        padding-right: 14px;
     }
 }

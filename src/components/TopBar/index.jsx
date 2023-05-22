@@ -11,17 +11,10 @@ const TopBar = ({ orders, filter, searchText }) => {
   return (
     <Container fluid>
       <Row className='top-header'>
-        <Col xs={12} xl={2} className='col-push-4 order-3 order-xl-1'>
-          <div className='header-search'>
-            <input
-              type='text'
-              name='search'
-              value={filter}
-              placeholder={'Zoek een product'}
-              onChange={searchText.bind(this)} />
-          </div>
+      <Col xs={12} xl={4} className='col-push-4 order-3 order-xl-1'>
+          <div className='header-search'><input type='text' placeholder={'Zoek een product'} /></div>
         </Col>
-        <Col xs={12} xl={1} className='mx-5 order-2  order-xl-2 mb-4 mb-xl-0'>
+        <Col xs={12} xl={2} className='mx-5 order-2  order-xl-2 mb-4 mb-xl-0'>
           <div className='direct-contact'><span>Direct contact?</span></div>
         </Col>
         <Col xs={2} lg={1} className='p-0 order-1 order-xl-3'>
