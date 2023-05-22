@@ -1,12 +1,14 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { Context } from '../../context';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import CartItem from '../../components/CartItem/index'
 import './style.css'
 
-const CartPage = ({ orders }) => {
-
+const CartPage = () => {
+  
+  const {orders} = useContext(Context);
   const sum_result = orders.reduce((prev, { price, count }) => prev + price * count, 0);
 
   return (
@@ -26,7 +28,7 @@ const CartPage = ({ orders }) => {
               ? <p>Geen bestellingen</p>
               : orders.map(order => (
                 <Col sm={12} md={6} lg={3} className='mb-5 mb-sm-0' key={order.id}>
-                  <CartItem {...order} isCart/>
+                  <CartItem {...order} />
                 </Col>
               ))
           }

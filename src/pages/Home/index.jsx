@@ -2,12 +2,10 @@ import React from 'react';
 import Products from '../../components/Products';
 import Offer from '../../components/Offer';
 
-const Home = ({ addToCart, productsBySearch }) => {
+const Home = () => {
   return (
     <>
-      <Products
-        addToCart={addToCart}
-        productsBySearch={productsBySearch} />
+      <Products/>
       <Offer />
     </>
   );

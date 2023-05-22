@@ -3,10 +3,10 @@ import MainHeader from '../MainHeader';
 import { Outlet } from 'react-router-dom';
 import Footer from '../Footer';
 
-const Layout = ({orders, filter, searchText}) => {
+const Layout = () => {
   return (
     <>
-      <MainHeader orders={orders} filter={filter} searchText={searchText}/>
+      <MainHeader />
       <div style={{minHeight: '100vh'}}>
         <Outlet />
       </div>

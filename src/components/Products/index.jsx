@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Context } from '../../context';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import image from '../../img/image.jpg';
 import './style.css'
 
-const Products = ({addToCart, productsBySearch}) => {
+const Products = () => {
+
+  const { addToCart, productsBySearch } = useContext(Context);
   return (
     <section className='products pt-5 mt-5'>
       <Container>
@@ -26,7 +29,7 @@ const Products = ({addToCart, productsBySearch}) => {
                 <Col sm={12} md={6} lg={3} className='mb-5 mb-sm-0'>
                   <div className='card'>
                     <div className='card__image'>
-                      <img src={image}/>
+                      <img src={image} />
                       <div className='card_price'>€{item.price}</div>
                     </div>
                     <div className='card__wrapper-content'>
@@ -37,9 +40,9 @@ const Products = ({addToCart, productsBySearch}) => {
                         <div className='p-4 text-start'>
                           {item.description}
                         </div>
-                        <button 
-                        onClick={() => addToCart(item.title, item.price, item.description)}
-                        className='card__footer'>
+                        <button
+                          onClick={() => addToCart(item.title, item.price, item.description, item.special)}
+                          className='card__footer'>
                           Product bestellen
                         </button>
                       </div>

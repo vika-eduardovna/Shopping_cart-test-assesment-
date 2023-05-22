@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Context } from '../../context'
 import { Route, Routes } from 'react-router-dom';
 import products_list from '../../services/products.json';
 import Layout from '../Layout';
@@ -21,7 +22,7 @@ const App = () => {
   });
 
 
-  const addToCart = (title, price, description) => {
+  const addToCart = (title, price, description, special) => {
     const target = orders.find(order => order.title === title);
     if (target) {
       target.count++;
@@ -29,7 +30,7 @@ const App = () => {
     } else {
       setOrders([...orders, {
         id: Date.now(),
-        title, price, description,
+        title, price, description, special,
         count: 1
       }])
     }
@@ -37,7 +38,7 @@ const App = () => {
 
 
   return (
-    <>
+    <Context.Provider value={{orders, filter, searchText, productsBySearch, addToCart}}>
       <Routes>
         <Route path='/' element={<Layout
           orders={orders}
@@ -51,9 +52,8 @@ const App = () => {
           <Route path='/contact' element={<Contact />} />
           <Route path='/cart' element={<CartPage orders={orders} />} />
         </Route>
-
       </Routes>
-    </>
+    </Context.Provider>
   );
 };
 
