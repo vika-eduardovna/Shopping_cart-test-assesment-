@@ -1,0 +1,54 @@
+.hero {
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    clip-path: polygon(0% 0%, 100% 30%, 100% 64%, 0% 100%);
+    width: 100%;
+    height: 141px;
+    z-index: 9999999;
+    bottom: -74px;
+    background: linear-gradient(34.18deg, #59F4FF -6.94%, #2C578E 83.39%);
+    opacity: 0.9;
+}
+
+.hero__title {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 16%;
+}
+
+.hero__title h1 {
+    font-weight: 700;
+    font-size: 75px;
+    line-height: 102px;
+    color: #FFFFFF;
+}
+.hero__title p {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 48px;
+    color: #FFFFFF;
+}
+
+@media (max-width: 1200px) {
+    .hero img {
+        height: 400px;
+    }
+}
+
+@media (max-width: 700px) {
+    .hero img {
+        object-fit: cover;
+    }
+
+    .hero__title h1 {
+        font-size: 40px;
+    }
+    .hero__title p {
+        font-size: 25px;
+    }
+}

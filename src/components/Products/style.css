@@ -1,0 +1,96 @@
+.products h2 {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 48px;
+}
+.products p {
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 29px;
+    color: #333333;
+}
+
+.products .card {
+    box-shadow: 8px 13px 38px -12px rgba(0,0,0,0.54);
+    position: relative;
+    border-bottom-right-radius: 40px;
+    cursor: pointer;
+}
+
+.card:hover .card__wrapper-content {
+    background-color: #1C0C4C;
+    color: #fff;
+}
+
+.card:hover .card__footer {
+    background-color: #D4C500;
+    color: #fff;
+}
+
+.card__image {
+    position: relative;
+}
+
+.card__image img {
+    height: 235px;
+}
+
+.card__image::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(180deg, rgba(28, 12, 76, 0) 0%, #1C0C4C 100%);
+    width: 100%;
+    height: 113px;
+    bottom: 0;
+}
+
+.card_price {
+    position: absolute;
+    bottom: 10px;
+    left: 34px;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 37px;
+    color: #fff;
+}
+
+.card_special {
+    position: absolute;
+    top: -4px;
+    right: 12px;
+    padding: 6px 33px 7px 14px;
+    background-color: #D4C500;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 18px;
+    color: #333333;
+    border-radius: 5px;
+    display: flex;
+}
+
+.card_special::after {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16.701' height='15.931' viewBox='0 0 16.701 15.931'%3E%3Cg id='_216411_star_icon' data-name='216411_star_icon' transform='translate(-3.649 -4.034)'%3E%3Cg id='Group_3533' data-name='Group 3533'%3E%3Cpath id='Path_2023' data-name='Path 2023' d='M9.362,9.158l-5.268.584a.5.5,0,0,0-.421.343.5.5,0,0,0,.14.521c1.566,1.429,3.919,3.569,3.919,3.569s-.646,3.113-1.074,5.19a.5.5,0,0,0,.2.506.5.5,0,0,0,.538.028C9.236,18.851,12,17.275,12,17.275L16.6,19.9a.5.5,0,0,0,.736-.534c-.428-2.078-1.071-5.191-1.071-5.191s2.353-2.14,3.919-3.566a.5.5,0,0,0,.14-.524.5.5,0,0,0-.42-.341c-2.108-.236-5.269-.586-5.269-.586l-2.183-4.83A.506.506,0,0,0,12,4.034a.5.5,0,0,0-.453.294C10.671,6.26,9.362,9.158,9.362,9.158Z' fill='%23fff'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+    width: 17px;
+    height: 16px;
+    display: block;
+    position: absolute;
+    right: 9px;
+    top: 7px;
+}
+
+.card__wrapper-content {
+    border-bottom-right-radius: 40px;
+    overflow: hidden;
+}
+
+.card__footer {
+    border-style: none;
+    background-color: #1C0C4C;
+    color: #fff;
+    display: flex;
+    padding: 10px 30px;
+    width: 192px;
+    margin-left: auto;
+    border-top-left-radius: 40px;
+}
