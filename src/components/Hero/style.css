@@ -1,7 +1,11 @@
 .hero {
     position: relative;
+    background-image: url("../../img/hero.jpg");
+    background-repeat: no-repeat;
+    height: 484px;
+    width: 100%;
+    background-size: cover;
 }
-
 .hero::before {
     content: "";
     position: absolute;
@@ -18,7 +22,6 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 16%;
 }
 
 .hero__title h1 {
